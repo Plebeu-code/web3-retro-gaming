@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Press Start 2P", cursive;
+  color: aliceblue;
+  // font-family: 'VT323', monospace !important;
+}
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../assets/video/parallax-bg.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .content {
+    height: calc(100% - 100px);
+    width: 100%;
+    display: flex;
+
+    > section {
+      height: 200px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+
+      .text-nft {
+        > h1 {
+          margin-bottom: 40px;
+          font-size: 3.2rem;
+        }
+        > p {
+          max-width: 450px;
+          font-size: 2.2rem;
+          font-family: "VT323", monospace;
+        }
+      }
+      .button-mint {
+        button {
+          margin-top: 50px;
+          background-color: #d6517d;
+          height: 30px;
+          width: 40px;
+          border: none;
+          box-shadow: 0px 2px 1px #0f0f0f;
+          cursor: pointer;
+        }
+        > input {
+          margin: 0 2px;
+          width: 80px;
+          height: 30px;
+          text-align: center;
+          border: none;
+          color: #0f0f0f;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+
+  .header {
+    padding: 0 30px;
+    margin-top: 16px;
+    background-color: transparent;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    .logo {
+      height: 100%;
+
+      > img {
+        height: 100%;
+      }
+    }
+
+    nav {
+      height: 100%;
+      ul {
+        height: 100%;
+        display: flex;
+        list-style: none;
+        align-items: center;
+        justify-content: space-around;
+        width: 400px;
+        color: white;
+        cursor: pointer;
+
+        li {
+
+          &:hover {
+            color: #d6517d;
+          }
+        }
+
+      }
+    }
+  }
+}
